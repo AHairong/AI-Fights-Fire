@@ -1,0 +1,88 @@
+/* Color de fondo gris, tipo de letra helvetica. El 'text-align: center' es para centrar el dashboard */
+body {
+	text-align: center;
+	background-color: #ececec;
+	font-family: 'Helvetica', sans-serif;
+	}
+
+/* Quitamos los margenes de los tí­tulos tipo 2. Los de los distintos paneles */
+h2 {
+	margin: 0px;
+	}
+
+/* Márgenes en auto para que quede centrado en la página.
+	Tamaño máximo de 920 pí­xeles.
+	configuración del grid a 3 columnas con un espaciado de 15 pí­xeles. */
+.dashboard-wrapper {
+	margin: auto;
+	max-width: 920px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
+	}
+
+/* Configuración de cada panel: texto alineado a la izquierda, color de fondo blanco, etc. */
+.dashboard-wrapper .panel {
+	text-align: left;
+	background-color: #fff;
+	border: 1px solid #d3d3d3;
+	box-shadow: 0 0 4px 1px rgba(143,143,143,.2);
+	padding: 15px;
+	}
+
+/* Los paneles con Id p1 y p5 ocuparan de la columna 1 a la 4 */
+.dashboard-wrapper #p1.panel, .dashboard-wrapper #p5.panel {
+	grid-column: 1 / 4;
+	}
+
+/* Configuración del footer */
+.bottom {
+	font-size: 10px;
+	margin-top: 15px;
+	}
+
+.bottom a {
+	color: #333;
+	text-decoration: none;
+	}
+
+/* Configuración responsive: para dispositivos con pantalla de máximo 104 pí­xeles de resolución. todos los paneles ocuparán de la columna 1 a la 4 */
+@media screen and (max-width: 1024px) {
+	.dashboard-wrapper .panel {
+		grid-column: 1 / 4;
+		}	
+	}
+
+#map {
+  height: 100%;
+}
+
+/*Responsive media queries*/
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+ /*PARA EL SELECTOR*/
+input {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto;
+   }
