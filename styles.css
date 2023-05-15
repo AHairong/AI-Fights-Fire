@@ -351,3 +351,21 @@ footer {
     font-family: Times New Roman;
     letter-spacing: 2px;
 }
+
+.alerta{
+    display: inline;
+    align-items: center;
+}
+
+.alerta img{
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 1100px;
+}
+
+/*ALERTA*/
+.alertas{
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+}
